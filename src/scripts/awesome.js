@@ -33,8 +33,18 @@ output.appendChild(fragment)
 // 1. Get value of button field
 // 2. Create card component with text inside
 
+const cardFactory = (classList, textContent) => {
+    const theSection = document.createElement("section");
+    theSection.classList = classList
+    theSection.textContent = textContent
+    return theSection
+}
 createCardButton.addEventListener("click", function () {
     const cardInfo = inputInfo.value
+    output.appendChild(cardFactory("card", cardInfo))
+
+    inputInfo.value = ""
+
 });
 
 fragment.appendChild(inputInfo)
