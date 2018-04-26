@@ -7,7 +7,7 @@ module.exports = function (grunt) {
                 files: [
                     "./scripts/**/*.js",
                     "./index.html",
-                    "./styles/**/*css",
+                    "./styles/**/*.css",
                     "!node_modules/**/*.js"
                 ],
                 tasks: ["eslint", "browserify", "copy"],
