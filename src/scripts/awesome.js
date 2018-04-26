@@ -1,3 +1,18 @@
+/* Modules
+
+    1. Creating Fragments
+    2. Creating components with facories
+    3. Adding event listeners to components
+    4. Adding components to DOM
+    5. Clearing fields
+*/
+
+const DomBuilder = require("./DomBuilder")
+
+
+
+
+
 // Final output DOM component reference
 const output = document.querySelector(".output");
 
@@ -49,7 +64,9 @@ createCardButton.addEventListener("click", function () {
 
 fragment.appendChild(inputInfo)
 fragment.appendChild(createCardButton)
-output.appendChild(fragment)
+
+DomBuilder(fragment, ".output")
+//output.appendChild(fragment)
 
 
 
